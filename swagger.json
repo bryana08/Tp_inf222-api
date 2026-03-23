@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Blog - INF222 (UY1)",
+    "version": "1.0.0",
+    "description": "Système complet de gestion d'articles"
+  },
+  "servers": [
+    { "url": "http://localhost:3000" }
+  ],
+  "paths": {
+    "/api/articles": {
+      "get": { "summary": "Afficher tous les articles", "responses": { "200": { "description": "OK" } } },
+      "post": {
+        "summary": "Créer un nouvel article",
+        "requestBody": {
+          "required": true,
+          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Article" } } }
+        },
+        "responses": { "201": { "description": "Créé" } }
+      }
+    },
+    "/api/articles/{id}": {
+      "get": {
+        "summary": "Récupérer un article par ID",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "OK" }, "404": { "description": "Non trouvé" } }
+      },
+      "delete": {
+        "summary": "Supprimer un article",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "Supprimé" } }
+      }
+    },
+    "/api/articles/date/{date}": {
+      "get": {
+        "summary": "Rechercher par date (AAAA-MM-JJ)",
+        "parameters": [{ "name": "date", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/api/articles/recherche/{query}": {
+      "get": {
+        "summary": "Rechercher par mot-clé",
+        "parameters": [{ "name": "query", "in": "path", "required": true, "schema": { "type": "string" } }],
+        "responses": { "200": { "description": "OK" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Article": {
+        "type": "object",
+        "properties": {
+          "titre": { "type": "string", "example": "Mon TP de Niveau 2" },
+          "auteur": { "type": "string", "example": "Ariane" },
+          "contenu": { "type": "string", "example": "Développement d'une API avec Swagger" }
+        },
+        "required": ["titre", "auteur"]
+      }
+    }
+  }
+}
