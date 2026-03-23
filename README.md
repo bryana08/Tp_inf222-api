@@ -43,6 +43,6 @@ Rendez-vous sur http://localhost:3000/api-docs pour tester les routes en direct.
 ​👨‍🎓 Cadre Académique
 ​Module : INF222 - Développement Web
 ​Établissement : Université de Yaoundé 1
-​Enseignant : Pr. Melatagia
+​Enseignant : Charles NJIOSSEU
 ​Étudiante : [NONGNI TEMGOUA CHANNELLE BRYANA]
 ​<!-- end list -->
