@@ -41,8 +41,12 @@ L'API supporte toutes les opérations CRUD de base ainsi que des filtres avancé
 Rendez-vous sur http://localhost:3000/api-docs pour tester les routes en direct.
 
 ​👨‍🎓 Cadre Académique
+
 ​Module : INF222 - Développement Web
+
 ​Établissement : Université de Yaoundé 1
+
 ​Enseignant : Charles NJIOSSEU
+
 ​Étudiante : [NONGNI TEMGOUA CHANNELLE BRYANA]
 ​<!-- end list -->
