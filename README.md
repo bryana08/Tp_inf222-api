@@ -31,9 +31,7 @@ L'API supporte toutes les opérations CRUD de base ainsi que des filtres avancé
    ```bash
    
 3. lancer le fichier
-   
    npm install
-
 4. Accéder à l'interface de test :
 
 Rendez-vous sur http://localhost:3000/api-docs pour tester les routes en direct.
